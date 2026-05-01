@@ -147,3 +147,90 @@ img {
     transform: rotate(360deg);
   }
 }
+
+
+/* HERO */
+.hero {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.birthday-text {
+  font-size: 28px;
+  animation: rotateText 8s linear infinite;
+}
+
+.sub-text {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* ROTATION */
+@keyframes rotateText {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25D366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* IMAGE */
+.image-container {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: orbit 12s linear infinite;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+}
+
+
+.whatsapp {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25D366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1);
+  background: #1ebe5d;
+}

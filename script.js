@@ -132,3 +132,34 @@ const stage = document.getElementById('stage');
         update();
         setInterval(spawnBalloon, 800);
         setInterval(spawnBird, 3000);
+
+
+const effects = document.querySelector(".effects");
+
+// floating stars
+function createStar() {
+  const star = document.createElement("div");
+  star.innerHTML = "✨";
+  star.style.position = "absolute";
+  star.style.left = Math.random() * window.innerWidth + "px";
+  star.style.top = "-20px";
+  star.style.fontSize = "18px";
+  document.body.appendChild(star);
+
+  let y = 0;
+
+  function fall() {
+    y += 2;
+    star.style.top = y + "px";
+
+    if (y < window.innerHeight) {
+      requestAnimationFrame(fall);
+    } else {
+      star.remove();
+    }
+  }
+
+  fall();
+}
+
+setInterval(createStar, 300);
